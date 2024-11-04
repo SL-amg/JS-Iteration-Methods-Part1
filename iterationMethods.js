@@ -98,4 +98,97 @@ const multiplyNewArray = divisibleBy5.map(function(num){
 })
 console.log(multiplyNewArray);
 
-// the End // 
+// the End //
+
+/*****************************************************************
+Part 4: Extra not required 🌶️🌶️🌶️
+******************************************************************/
+/*************************************
+ * logger(array)
+ *
+ * - Accepts an array
+ * - Logs every element of the array
+ ************************************/
+
+const logger = ["Blue", "Black", "Red"];
+logger.forEach(function (log) {
+    console.log(log);
+  });
+
+/*************************************
+ * toCelsius(temperatures)
+ *
+ * - Accepts an array of temperatures
+ *   in degrees Fahrenheit
+ * - Returns an array of temperatures
+ *   in degrees Celsius
+ *
+ * The conversion is:
+ *   C = (F - 32) * (5/9)
+ ************************************/
+
+const tempInFah = [0, 40, 45, 60, 70];
+
+const toCelsius = tempInFah.map(function(temperature){
+temperature = ((temperature -32)*((5/9)));
+return temperature;
+});
+
+console.log(toCelsius);
+
+/**************************************
+ * hottestDays(temperatures, threshhold)
+ *
+ * - Accepts an array of temperatures
+ * - Accepts a threshhold temperature
+ * - Returns an array of temperatures
+ *   that exceed the threshhold
+ ***************************************/
+
+const temperatureInFah = [26, 23, 50, 67, 46];
+const threshHoldTemp = 35;
+
+const hottestDays = temperatureInFah.filter(function(temp){
+    if (temp > threshHoldTemp)
+    return true
+    else return false;
+});
+console.log (hottestDays)
+
+
+/******************************************
+ * logHottestDays(temperatures, threshhold)
+ *
+ * - Accepts an array of temperatures
+ *   IN DEGREES FAHRENHEINT
+ * - Accepts a threshhold temperature
+ *   IN DEGREES FAHRENHEINT
+ * - Logs temperatures that exceed the
+ *   threshhold to the console
+ *   IN DEGREES CELSIUS
+ *
+ * hint: you can combine
+ *       all previous functions
+ *******************************************/
+
+const temperatureInDegFah = [55, 34, 67, 70, 80];
+const threshHoldTempDeg = 12;
+
+const convertArrayToDegC = temperatureInDegFah.map(function(temperature2){
+    temperature2 = ((temperature2 -32)*((5/9)));
+    return temperature2;
+    });
+    
+console.log(convertArrayToDegC); // this will print array in Degree C
+
+const logHottestDays = convertArrayToDegC.filter(function(temp){
+    if (temp > threshHoldTempDeg)
+        return true
+        else return false;
+    });
+    console.log (logHottestDays) // this will print array hottest than 12 degree C
+
+    logHottestDays.forEach(function (log) { // this will log the array in a list
+        console.log(log);
+      });
+
