@@ -110,7 +110,7 @@ Part 4: Extra not required 🌶️🌶️🌶️
  * - Logs every element of the array
  ************************************/
 
-const logger = ["Blue", "Black", "Red"];
+const logger = ["Day 1", "Day 2", "Day 3"];
 logger.forEach(function (log) {
     console.log(log);
   });
