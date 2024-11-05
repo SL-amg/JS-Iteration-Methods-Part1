@@ -93,7 +93,7 @@ const divisibleBy5Again = numbers.filter(function(num){
 // after filtering the number devide by 5 in a new array called divisibleBy5Again we multply each element by 3 using map
 
 const multiplyNewArray = divisibleBy5.map(function(num){
-    num = num *5;
+    num = num *3;
     return num;
 })
 console.log(multiplyNewArray);
@@ -131,6 +131,7 @@ const tempInFah = [0, 40, 45, 60, 70];
 
 const toCelsius = tempInFah.map(function(temperature){
 temperature = ((temperature -32)*((5/9)));
+temperature = temperature.toFixed(2);
 return temperature;
 });
 
@@ -176,6 +177,7 @@ const threshHoldTempDeg = 12;
 
 const convertArrayToDegC = temperatureInDegFah.map(function(temperature2){
     temperature2 = ((temperature2 -32)*((5/9)));
+    temperature2 = temperature2.toFixed(2);
     return temperature2;
     });
     
